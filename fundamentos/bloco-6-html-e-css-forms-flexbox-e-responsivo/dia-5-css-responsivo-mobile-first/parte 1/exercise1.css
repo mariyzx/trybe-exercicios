@@ -1,0 +1,124 @@
+/*
+ * @see http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+ * apply a natural box layout model to all elements, but allowing components to change
+ */
+ html {
+    box-sizing: border-box;
+  }
+  
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+  body {
+  
+  }
+  
+  article {
+  
+  }
+  
+  h1 {
+  
+  }
+  
+  h2 {
+  
+  }
+  
+  img {
+      max-width: 100%;
+  }
+  
+  main {
+  
+  }
+  
+  section {
+  
+  }
+  
+  figure {
+      margin: 0;
+  }
+  
+  figcaption {
+    font-size: .8em;
+  }
+
+  /*
+ * @see http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+ * apply a natural box layout model to all elements, but allowing components to change
+ */
+ html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+article {
+  font-size: xx-large;
+}
+
+h1 {
+  font-size: smaller;
+}
+
+h2 {
+  font-size: xx-large;
+}
+
+img {
+	max-width: 100%;
+};
+
+main {
+
+}
+
+section {
+
+}
+
+figure {
+	margin: 0;
+  padding: 18px;
+}
+
+figcaption {
+  font-size: .8em;
+}
+
+@media screen and (max-width: 700px) {
+  body {
+    background-color: rgb(194, 193, 193);
+    margin: 20px;
+  }
+  article, h2, figcaption {
+    font-size: 20px;
+  }
+  .figuras {
+    width: 300px
+  }
+  .coluna {
+    float: left;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  body {
+    background-color: red;
+    margin: 27px;
+    max-width: 1300px;
+  }
+  article, h2, figcaption {
+    font-size: 30px;
+  }
+}
