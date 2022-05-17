@@ -68,7 +68,7 @@ const books = [
 
 function everyoneWasBornOnSecXX() {
   // escreva seu código aqui
-    return books.some((book) => seculo20Final >= book.author.birthYear >= seculo20Inicio);
+    return books.every((book) => seculo20Final >= book.author.birthYear >= seculo20Inicio);
 
 }
 
