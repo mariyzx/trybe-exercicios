@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrybeTrip</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>TrybeTrip!</h1>
+    <form>
+        <label for="nome">Nome:
+            <input type="text" name="fullname" id="nome" minlength="10" maxlength="40" autofocus>
+        </label>
+        <br>
+        <label for="email">E-mail:
+            <input type="email" name="email" id="email" minlength="10" maxlength="50">
+        </label>
+        <br>
+
+        <label for="destino">
+            <input type="checkbox" name="cidade" id="destino1">Cidade
+            <input type="checkbox" name="campo" id="destino2">Campo
+            <input type="checkbox" name="praia" id="destino3">Praia
+            <input type="checkbox" name="montanhas" id="destino4">Montanhas
+        </label>
+        <br>
+
+        <label for="motivo">Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso TrybeTrip?<br>
+            <input type=text name="motivo" id="motivo" maxlength="500" size="50px">
+        </label>
+        <br>
+
+        <label for="data">Qual a melhor data para realizar sua viagem?
+            <input type="date" name="data" id="data-viagem">
+        </label>
+        <br>
+
+        <label for="oportunidades">Gostaria de receber outras incríveis oportunidades oferecidas pela Trybe?
+            <input type="checkbox" name="oportunidades" id="oportunidades">Concordo
+        </label>
+        <br>
+
+        <label for="divulgação">Concordo que imagens das minhas férias poderão ser usadas na divulgação de concursos futuros.
+            <input type="checkbox" name="divulgação" id="divulgação">Concordo
+        </label>
+        <br>
+
+        <label for="submit">
+            <input type="submit" value="Enviar" id="btn">
+        </label>
+
+        <label for="erase">
+            <input type="button" value="Apagar" id="btn2">
+        </label>
+    </form>
+
+    <p id="final"></p>
+    <script src="script.js"></script>
+</body>
+</html>
