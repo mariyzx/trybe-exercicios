@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1652305923189" clover="3.2.0">
+  <project timestamp="1652305923190" name="All files">
+    <metrics statements="6" coveredstatements="6" conditionals="10" coveredconditionals="10" methods="1" coveredmethods="1" elements="17" coveredelements="17" complexity="0" loc="6" ncloc="6" packages="1" files="1" classes="1"/>
+    <file name="myFizzBuzz.js" path="/home/mariana/Downloads/trybe-exercicios/fundamentos/bloco-7-introduçao-a-javascript-es6-template-literals-testes/dia-3-primeiros-passos-em-jest/myFizzBuzz.js">
+      <metrics statements="6" coveredstatements="6" conditionals="10" coveredconditionals="10" methods="1" coveredmethods="1"/>
+      <line num="2" count="5" type="cond" truecount="2" falsecount="0"/>
+      <line num="3" count="4" type="cond" truecount="4" falsecount="0"/>
+      <line num="4" count="3" type="cond" truecount="2" falsecount="0"/>
+      <line num="5" count="2" type="cond" truecount="2" falsecount="0"/>
+      <line num="6" count="1" type="stmt"/>
+      <line num="9" count="1" type="stmt"/>
+    </file>
+  </project>
+</coverage>
