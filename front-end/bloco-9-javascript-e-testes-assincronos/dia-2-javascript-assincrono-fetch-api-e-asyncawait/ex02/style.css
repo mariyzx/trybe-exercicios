@@ -1,0 +1,22 @@
+body {
+    background-image: url('https://www.meliuz.com.br/blog/wp-content/uploads/2021/10/criptomoedas.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+}
+
+h1 {
+    text-align: center;
+    font-size: xxx-large;
+}
+
+.navigation {
+    text-align: center;
+}
+
+.navigation > ul {
+    display: inline-block;
+    font-size: xx-large;
+    color: black;
+    margin-top: 60px;
+}
