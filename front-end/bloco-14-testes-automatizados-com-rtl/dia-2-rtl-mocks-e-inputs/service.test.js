@@ -1,12 +1,12 @@
-var randomNumber = require('./service');
+var service = require('./service');
 
-it('Testa se a função randomNumber está sendo chamada', () => {
-  randomNumber = jest
+it('Testa se a função randomNumber está sendo chamada, seu retorno e qnts vezes foi chamada', () => {
+  service.randomNumber = jest
   .fn()
-  .mockReturnValue(true);
+  .mockReturnValue(10);
 
-
-  randomNumber();
-  expect(randomNumber).toHaveBeenCalled();
-  expect(randomNumber).toHaveBeenCalledTimes(1);
+  expect(service.randomNumber()).toBe(10);
+  expect(service.randomNumber).toHaveBeenCalled();
+  expect(service.randomNumber).toHaveBeenCalledTimes(1);
 });
+
