@@ -54,8 +54,29 @@ it('Mockando a função returnConcat para concatenar três strings', () => {
   expect(returnConcat('t', 'r', 'y')).toBe('try');
 });
 
-test("restaurando a primeira função e verifica se ela retorna em caixa alta", () => {
+it("restaurando a primeira função e verifica se ela retorna em caixa alta", () => {
   service.returnCaps.mockRestore();
 
   expect(service.returnCaps("lowercase")).toBe("LOWERCASE");
+})
+
+describe('testando a requisição', () => {
+  service.fetchDog = jest.fn();
+  afterEach(service.fetchDog.mockReset);
+
+  it('testando caso a promise seja resolvida', async () => {
+    service.fetchDog.mockResolvedValue('request sucess');
+
+    service.fetchDog();
+    expect(service.fetchDog).toHaveBeenCalled();
+    await expect(service.fetchDog()).resolves.toBe('request sucess');
+  });
+
+  it('testando caso a promise seja rejeitada', async () => {
+    service.fetchDog.mockResolvedValue('request failed');
+
+    expect(service.fetchDog).toHaveBeenCalledTimes(0);
+    await expect(service.fetchDog()).resolves.toMatch('request failed');
+    expect(service.fetchDog).toHaveBeenCalledTimes(1);
+  })
 })

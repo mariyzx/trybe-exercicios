@@ -14,4 +14,14 @@ returnConcat = (str1, str2) => {
   return str1 + ' ' + str2;
 }
 
-module.exports = { randomNumber, returnCaps, returnFirstLetter, returnConcat };
+fetchDog = () => {
+  return fetch("https://dog.ceo/api/breeds/image/random").then(response =>
+    response
+      .json()
+      .then(json =>
+        response.ok ? Promise.resolve(json) : Promise.reject(json)
+      )
+  );
+}
+
+module.exports = { randomNumber, returnCaps, returnFirstLetter, returnConcat, fetchDog };
