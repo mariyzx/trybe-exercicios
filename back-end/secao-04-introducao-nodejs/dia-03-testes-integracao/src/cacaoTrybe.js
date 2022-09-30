@@ -21,4 +21,14 @@ const getAllChocolates = async () => {
   }
 };
 
-module.exports = { getAllChocolates };
+const getFilteredChocolates = async (query) => {
+  try {
+    const cacao = await readChocolates();
+    return cacao.chocolates
+      .filter((choco) => choco.name.toLowerCase().includes(query.toLowerCase()));
+  } catch (error) {
+    return null;
+  }
+};
+
+module.exports = { getAllChocolates, getFilteredChocolates };

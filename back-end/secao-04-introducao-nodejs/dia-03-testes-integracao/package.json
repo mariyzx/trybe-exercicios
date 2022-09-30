@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha tests/**/*.test.js --exit",
-    "lint": "eslint --no-inline-config --no-error-on-unmatched-pattern -c .eslint.json ."
+    "lint": "eslint --no-inline-config --no-error-on-unmatched-pattern -c .eslint.json .",
+    "start": "node src/app.js"
   },
   "keywords": [],
   "author": "",
