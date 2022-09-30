@@ -1,0 +1,24 @@
+{
+  "name": "dia-03-testes-integracao",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha tests/**/*.test.js --exit",
+    "lint": "eslint --no-inline-config --no-error-on-unmatched-pattern -c .eslint.json ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "4.3",
+    "chai-http": "4.3",
+    "eslint": "^6.8.0",
+    "eslint-config-trybe-backend": "1.0",
+    "mocha": "10.0",
+    "sinon": "14.0"
+  },
+  "dependencies": {
+    "express": "4.17"
+  }
+}
