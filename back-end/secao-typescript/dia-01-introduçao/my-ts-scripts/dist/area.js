@@ -2,12 +2,12 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.convert = void 0;
 const readline = require('readline-sync');
-const units = ['kg', 'hg', 'dag', 'g', 'dg', 'cg', 'mg'];
+const units = ['km²', 'hm²', 'dam²', 'm²', 'dm²', 'cm²', 'mm²'];
 function convert(value, base, unit) {
     const baseUnit = units.indexOf(base);
     const finalUnit = units.indexOf(unit);
     const exponent = (finalUnit - baseUnit);
-    const result = value * Math.pow(10, exponent);
+    const result = value * Math.pow(100, exponent);
     return result;
 }
 exports.convert = convert;
