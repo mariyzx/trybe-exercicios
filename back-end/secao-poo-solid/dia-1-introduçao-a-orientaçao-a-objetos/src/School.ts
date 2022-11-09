@@ -10,4 +10,13 @@ class Estudante {
     this._notas = notas;
     this._trabalhos = trabalhos;
   }
+
+  calculaTotalNotas(notas: number[]): number {
+    return notas.reduce((a,b) => a + b, 0)
+  }
+
+  calculaMediaNotas(notas: number[]): number {
+    const total = this.calculaTotalNotas(notas) 
+    return total / notas.length
+  }
 }
