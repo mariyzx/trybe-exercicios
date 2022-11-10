@@ -4,9 +4,7 @@ export default class Data {
   public _ano: number;
 
   constructor(dia: number, mes: number, ano: number) {
-    const dataStr = `${dia}-${mes}-${ano}`;
-
-    if (new Date(dataStr).getDate() != dia) {
+    if (!Data.validateDate(dia, mes, ano)) {
       this._dia = 1;
       this._mes = 1;
       this._ano = 1900
@@ -40,4 +38,36 @@ export default class Data {
   set ano(value: number) {
     this._ano = value;
   }
+
+  getMonthName(): string {
+    const months = [
+      'janeiro',
+      'fevereiro',
+      'março',
+      'abril',
+      'maio',
+      'junho',
+      'julho',
+      'agosto',
+      'setembro',
+      'outubro',
+      'novembro',
+      'dezembro',
+    ];
+
+    return months[this._mes - 1]
+  }
+
+  isLeapYear(): boolean {
+    return this._ano % 4 === 0;
+  }
+
+  private static validateDate(dia: number, mes: number, ano: number)
+  : boolean {
+  const dateStr = `${ano}-${mes}-${dia}`;
+
+  if (new Date(dateStr).getDate() !== dia) return false;
+
+  return true;
+}
 }
