@@ -1,4 +1,4 @@
-class Estudante {
+export default class Estudante {
   public _matricula: string;
   public _nome: string;
   public _notas: number[];
